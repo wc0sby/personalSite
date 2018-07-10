@@ -7,16 +7,17 @@ import {faLinkedin } from '@fortawesome/free-brands-svg-icons'
 export default class contactBar extends Component{
   render(){
     const styles={
-      display: 'flex',
-      width: '25%'
+     textAlign: 'center',
+      margin: '25px 0px',
+      width: '90%'
     }
     return(
-      <div >
-        <Typography variant='title'>
+      <div style={styles} >
+        <Typography variant='title' style={{margin: '10px 0px'}}>
           Contact
         </Typography>
         <Grid container spacing={0} justify='center'>
-          <Grid item xs>
+          <Grid item xs justify='flex-end'>
           <FontAwesomeIcon icon={faLinkedin} />
           </Grid>
           <Grid item xs>

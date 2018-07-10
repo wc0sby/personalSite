@@ -4,8 +4,8 @@ import Typography from '@material-ui/core/Typography';
 export default class SectionContent extends Component{
   render(){
     return(
-      <div style={{width: '75%'}}>
-        <Typography variant="title" color="inherit">
+      <div style={{width: '75%', marginTop: 25}}>
+        <Typography variant="title" color="inherit" style={{margin: '10px 0px'}}>
           Title
         </Typography>
         <Typography color="inherit">

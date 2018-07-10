@@ -8,7 +8,6 @@ import Header from './header'
 import Section from './section'
 import Contact from './contactBar'
 import Grid from '@material-ui/core/Grid';
-import { height } from 'window-size';
 
 export default class Main extends Component{
   render(){

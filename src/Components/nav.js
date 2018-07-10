@@ -10,10 +10,18 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 
+const links = ['Projects', 'Resume', 'Contact']
+
+const renderLinks = ()=> links.map((i)=>{
+  return <Typography variant="link" color="inherit">
+    {i}
+  </Typography>
+})
+
 const styles = {
   root: {
     flexGrow: 1,
-    width: '100%'
+    // width: '100%',
   },
 };
 
@@ -25,21 +33,11 @@ class Nav extends Component {
         <AppBar position="fixed" color="default">
           <Toolbar style={{justifyContent: 'space-between'}}>
             <Typography variant="title" color="inherit">
-              Title
+              Wade Cosby
             </Typography>
-            <Toolbar style={{width: '25%', justifyContent: 'space-around'}}>
-            <Typography variant="title" color="inherit">
-              Links
-            </Typography>
-            <Typography variant="title" color="inherit">
-              Links
-            </Typography>
-            <Typography variant="title" color="inherit">
-              Links
-            </Typography>
-            <Typography variant="title" color="inherit">
-              Links
-            </Typography>
+            <Toolbar style={{width: '20%', justifyContent: 'space-around'}}>
+            {renderLinks()}
+
             </Toolbar>
           </Toolbar>
         </AppBar>
