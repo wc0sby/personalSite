@@ -8,36 +8,42 @@ import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
+import { Link } from 'react-router-dom'
+import Button from '@material-ui/core/Button';
 
-const links = ['Projects', 'Resume', 'Contact']
 
-const renderLinks = ()=> links.map((i)=>{
-  return <Typography variant="link" color="inherit">
+const renderLinks = (arr, style)=> arr.filter(i=> i !== 'Wade Cosby').map((i, k)=>{
+  return  <Link to={`/${i}`} key={k} style={{textDecoration: 'none', color: 'inherit'}}> { 
+  <Button className={style} color="inherit">
     {i}
-  </Typography>
+  </Button>}
+  </Link>
 })
 
-const styles = {
+const styles = theme => ({
+  button: {
+    margin: theme.spacing.unit,
+  },
   root: {
     flexGrow: 1,
     // width: '100%',
   },
-};
+});
 
 class Nav extends Component {
   render(){
-    const { classes } = this.props;
+    const { classes, content } = this.props;
     return (
       <div className={classes.root}>
         <AppBar position="fixed" color="default">
           <Toolbar style={{justifyContent: 'space-between'}}>
-            <Typography variant="title" color="inherit">
-              Wade Cosby
-            </Typography>
+            <Link to="/" style={{textDecoration: 'none'}}>
+              <Button className={classes.buttton} >
+                {content[0]}
+              </Button>
+            </Link>
             <Toolbar style={{width: '20%', justifyContent: 'space-around'}}>
-            {renderLinks()}
-
+              {renderLinks(content, classes.button)}
             </Toolbar>
           </Toolbar>
         </AppBar>

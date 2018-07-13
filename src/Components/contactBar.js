@@ -11,13 +11,14 @@ export default class contactBar extends Component{
       margin: '25px 0px',
       width: '90%'
     }
+    // console.log(this.props.contacts)
     return(
       <div style={styles} >
         <Typography variant='title' style={{margin: '10px 0px'}}>
           Contact
         </Typography>
         <Grid container spacing={0} justify='center'>
-          <Grid item xs justify='flex-end'>
+          <Grid item xs >
           <FontAwesomeIcon icon={faLinkedin} />
           </Grid>
           <Grid item xs>

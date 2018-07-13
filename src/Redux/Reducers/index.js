@@ -1,12 +1,12 @@
 import {combineReducers} from 'redux';
 
-function contact(state = [], action) {
+function contacts(state = [], action) {
   // For now, don't handle any actions
   // and just return the state given to us.
   return state
 }
 
-function about(state = [], action) {
+function contents(state = [], action) {
   // For now, don't handle any actions
   // and just return the state given to us.
   return state
@@ -18,6 +18,6 @@ function projects(state = [], action) {
   return state
 }
 
-const reducer = combineReducers({contact, about, projects})
+const reducer = combineReducers({contacts, contents, projects})
 
 export default reducer

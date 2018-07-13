@@ -5,25 +5,29 @@ section (i.e sections, article, bios...)
 */
 import React, { Component } from 'react';
 import Header from './header'
-import Section from './section'
-import Contact from './contactBar'
+// import AboutSection from '../Container/contentAboutContainer'
+import Section from '../Components/section'
+import Contact from '../Container/contactContainer'
 import Grid from '@material-ui/core/Grid';
+
 
 export default class Main extends Component{
   render(){
+    const { content } = this.props
     return (
     <main style={{paddingTop: 50, flexGrow: 1}}>
-      <Header />
-      <div style={{minHeight: 500}}>
-      <Grid container spacing={24} justify='center' alighnItems='center'>
+      <Header content= { content } />
+      <div style={{minHeight: 250}}>
+      <Grid container spacing={24} justify='center' alignItems='center'>
         {/* Placeholder */}
         <Grid item xs={2}/>
         {/* Content */}
-        <Grid item xs={5}>
-          <Section />
+        <Grid item xs={6}>
+        {/* Routing on components based on clicks from nav bar */}
+          <Section content={ content } />
         </Grid>
         {/* Contact */}
-        <Grid item lg={1} xs={0}>
+        <Grid item lg={1} xs={false}>
           <Contact />
         </Grid>
       </Grid>

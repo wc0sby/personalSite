@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
-import Photo from '../IMG_0451.JPG'
+import Photo from '../Images/contact.png'
+
+// import Photo from '../Images/IMG_0451.JPG'
 
 const styles = {
   row: {
@@ -29,12 +31,12 @@ const styles = {
 
 class ImageAvatar extends Component {
   render(){
-    const { classes } = this.props;
+    const { classes, content } = this.props;
     return (
       <div className={(classes.row)}>
         <Avatar
           alt="Wade Cosby"
-          src={Photo}
+          src={content}
           className={classNames(classes.avatar, classes.bigAvatar)}
         />
       </div>
