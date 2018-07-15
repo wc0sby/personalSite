@@ -1,30 +1,43 @@
 import React, { Component } from 'react'
-import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 export default class contactBar extends Component{
   render(){
+    const { contacts } = this.props
+
     const styles={
-     textAlign: 'center',
-      margin: '25px 0px',
-      width: '90%'
+      container:{
+        textAlign: 'center',
+        margin: '25px 0px',
+      },
+      linksContainer:{
+        textAlign: 'left',
+        margin: '0 25%',
+      },
+      links:{
+        textDecoration: 'none',
+        color: '#575a60'
+      }
+    }
+
+    const getContactLinks = ()=>{
+      return contacts.map((i, k)=>{
+        return <div key={k} style={styles.linksContainer}>
+          <a href={i.link} style={styles.links}>
+          <FontAwesomeIcon icon={i.icon} />
+          <span style={{margin: '0 10px'}}>{i.name}</span>
+        </a>
+        </div>
+      })
     }
     // console.log(this.props.contacts)
     return(
-      <div style={styles} >
+      <div style={styles.container} >
         <Typography variant='title' style={{margin: '10px 0px'}}>
           Contact
         </Typography>
-        <Grid container spacing={0} justify='center'>
-          <Grid item xs >
-          <FontAwesomeIcon icon={faLinkedin} />
-          </Grid>
-          <Grid item xs>
-          LinkedIn
-          </Grid>
-        </Grid>
+          {getContactLinks()}
       </div>
     )
   }

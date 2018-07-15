@@ -23,6 +23,9 @@ const renderLinks = (arr, style)=> arr.filter(i=> i !== 'Wade Cosby').map((i, k)
 const styles = theme => ({
   button: {
     margin: theme.spacing.unit,
+    '&:hover': {
+      borderBottom: 'solid #62ce56'
+    },
   },
   root: {
     flexGrow: 1,
@@ -37,7 +40,7 @@ class Nav extends Component {
       <div className={classes.root}>
         <AppBar position="fixed" color="default">
           <Toolbar style={{justifyContent: 'space-between'}}>
-            <Link to="/" style={{textDecoration: 'none'}}>
+            <Link className={classes.button} to="/" style={{textDecoration: 'none'}}>
               <Button className={classes.buttton} >
                 {content[0]}
               </Button>

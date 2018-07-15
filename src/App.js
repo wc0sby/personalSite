@@ -14,13 +14,16 @@ import {
   Switch,
   Route,
 } from 'react-router-dom'
+import Resume from './Components/resume';
 
 class App extends Component {
   render() {
     return (
-      <div >
+      <div style={{minHeight:'100%', position:'relative'}}>
+      <div style={{paddingBottom:'70px', height: '100%'}}>
       <CssBaseline />
       <Nav />
+        <div>
       <Switch>
         <Route exact path="/" component={AboutSection} />
         <Route path="/Projects" render={props=>{
@@ -32,9 +35,20 @@ class App extends Component {
           )}
         } 
         />
-        <Route path="/Resume" component={ResumeSection} />
+        <Route path="/Resume" render={props=>{
+          return(
+            <div>
+            <ResumeSection />
+            <Resume />
+            </div>
+          )}
+        } 
+        />
+        {/* <Route path="/Resume" component={ResumeSection} /> */}
         <Route path="/Contact" component={ContactSection} />
       </Switch> 
+      </div>
+      </div>
       <Footer />
       </div>
     );

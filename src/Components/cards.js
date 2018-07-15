@@ -6,11 +6,11 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid'
 
 const styles = {
   card: {
     maxWidth: 345,
-    marginBottom: 30
   },
   media: {
     height: 0,
@@ -23,7 +23,7 @@ class ProjectCard extends Component {
     const { classes, project } = this.props;
 
     return (
-      <div>
+      <Grid item xs={12} lg>
         <Card className={classes.card}>
           <CardMedia
             className={classes.media}
@@ -44,7 +44,7 @@ class ProjectCard extends Component {
             </Button>
           </CardActions>
         </Card>
-      </div>
+      </Grid>
     );
   }
 }

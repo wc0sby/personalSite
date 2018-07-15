@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
-import Photo from '../Images/contact.png'
 
 // import Photo from '../Images/IMG_0451.JPG'
 
