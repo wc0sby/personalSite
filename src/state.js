@@ -100,7 +100,7 @@ export default {
       name: 'Chrome Landing Page',
       photo: weatherProject,
       description: 'Note: This project is not yet deployed to the Chrome Extensions library.  This project was built with a team of 4 people in an abbreviated hackathon.  We built this out and deployed as a local machine Chrome Extension.',
-      link: 'https://balancedbudget.herokuapp.com/'
+      link: 'https://github.com/wc0sby/weatherLanding/tree/master/src'
     },
   ]
 }
