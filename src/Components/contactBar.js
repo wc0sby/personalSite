@@ -13,11 +13,11 @@ export default class contactBar extends Component{
       },
       linksContainer:{
         textAlign: 'left',
-        margin: '0 25%',
+        margin: '2% 25%',
       },
       links:{
         textDecoration: 'none',
-        color: '#575a60'
+        color: '#575a60',
       }
     }
 

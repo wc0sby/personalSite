@@ -8,15 +8,35 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid'
 
-const styles = {
+const styles =theme=>({
   card: {
     maxWidth: 345,
+    minHeight: '100%',
+    position: 'relative',
+    paddingBottom: 40
   },
   media: {
-    height: 0,
     paddingTop: '56.25%', // 16:9,
   },
-};
+  content: {
+    paddingBottom: 40
+  },
+  button: {
+    '&:hover': {
+      backgroundColor: '#62ce56',
+    },
+    margin: theme.spacing.unit,
+    background: '#ce5454',
+    color: '#ffff'
+  },
+  position: {
+    justifyContent: 'center',
+    position: 'absolute',
+    bottom: 0,
+    marginTop: 30,
+    width: '100%'
+  }
+})
 
 class ProjectCard extends Component {
     render(){
@@ -30,7 +50,7 @@ class ProjectCard extends Component {
             image={project.photo}
             title={project.name}
           />
-          <CardContent>
+          <CardContent className={classes.content}>
             <Typography gutterBottom variant="headline" component="h2">
               {project.name}
             </Typography>
@@ -38,8 +58,8 @@ class ProjectCard extends Component {
               {project.description}
             </Typography>
           </CardContent>
-          <CardActions>
-            <Button size="small" color="primary" href={project.link}>
+          <CardActions className={classes.position}>
+            <Button size="small" className={classes.button} href={project.link}>
               View Project
             </Button>
           </CardActions>

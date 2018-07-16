@@ -81,25 +81,25 @@ export default {
     {
       name: 'Balanced',
       photo: balancedProject,
-      description: 'App for budgeting your life',
+      description: 'This app is my latest project to design a tool for the everyday consumer. The idea is to give the consumer control of their finances and help reduce their overall debt.  This project is built using Node.js, ReactJS, and Material UI.',
       link: 'https://balancedbudget.herokuapp.com/'
     },
     {
       name: 'Grubba',
       photo: grubbaProject,
-      description: 'App for locating food venues around you, based on desired cuisines',
+      description: 'Grubba is a project that I used to learn how to pass around data from 3rd party API services.  This app uses the Zomato API and is currently configured to utilize geoservices.  The app will display the top 20 restaurants in the area by cuisine.',
       link: 'https://wc0sby.github.io/Grubba/'
     },
     {
       name: 'Portfolio v1.0',
       photo: portfolioProject,
-      description: 'My first portfolio project',
+      description: `This is my first live portfolio.  While this is no longer in production, it was a really fun project that included a connection to a trivia API that I still love to play with today, even though I'm terrible at trivia.  Also, this project taught me how to utilize many third party frameworks, and how they can be both friendly and evil`,
       link: 'https://wc0sby.github.io/portfolio/'
     },
     {
       name: 'Chrome Landing Page',
       photo: weatherProject,
-      description: 'App for budgeting your life',
+      description: 'Note: This project is not yet deployed to the Chrome Extensions library.  This project was built with a team of 4 people in an abbreviated hackathon.  We built this out and deployed as a local machine Chrome Extension.',
       link: 'https://balancedbudget.herokuapp.com/'
     },
   ]
