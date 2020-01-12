@@ -23,7 +23,7 @@ class Resume extends Component{
   render(){
     const { classes } = this.props
     return(
-      <Grid container spacing={24} justify='center'>
+      <Grid container spacing={20} justify='center'>
         <Grid item xs lg={2}>
         <Button variant="extendedFab" href={resume} className={classes.button}>
           <FontAwesomeIcon icon={faFilePdf} className={classes.extendedIcon} />
